@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta property="og:url"         content="http://chrisabel.love/" />
+<meta property="og:title"       content="ChrIsabel" />
+<meta property="og:description" content="A union of two of the best people I know" />
+<meta property="og:image"       content="http://chrisabel.love/static/img/414.jpg" />
+
+<script src="static/js/jquery-3.5.1.min.js"></script>
+<script>
+  console.log("meow")
+  $().ready(function(){
+    console.log("ready")
+    var i = 1;
+    var images = [
+      "000086310001.jpg",
+      "000086310002.jpg",
+      "DSCF3263.jpg",
+      "DSCF3332.jpg",
+      "DSCF4842.jpg",
+      "DSCF5019.jpg",
+      "DSCF5033.jpg",
+      "DSCF5472.jpg",
+      "DSCF5474.jpg"
+    ]
+    var image = $('.bgimg')
+    image.css('background-image', 'url(static/img/000086310001.jpg)')
+    setInterval(function(){
+      console.log('trigger')
+      image.fadeOut(400, function(){
+        image.css('background-image', 'url(static/img/' + images [i++] +')')
+        image.fadeIn(400)
+      })
+      if(i == images.length)
+        i = 0
+    }, 5000)
+  })
+</script>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg {
+  height: 100%;
+  position: relative;
+  opacity: 1.00;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 100%;
+  text-align: left;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+
+</head>
+<body>
+
+    <div class="bgimg">
+      <div class="caption">
+        <span class="border">I FUCKING LOVE THESE TWO</span>
+      </div>
+    </div>
+
+</body>
+</html>
