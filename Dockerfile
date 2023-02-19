@@ -1,4 +1,4 @@
-FROM nginx:1.19.6-alpine
+FROM nginx:1.23-alpine-slim
 
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 
